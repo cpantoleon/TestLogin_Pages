@@ -397,9 +397,14 @@ namespace TestLogin_Pages
             }
         }
 
-
         [TestCleanup] 
         public void Cleanup()
+        {
+            driver.Quit();
+        }
+
+        [ClassCleanup]
+        public static void ClassCleanup()
         {
             DirectoryInfo d = new DirectoryInfo(Util.GetPath("Output/"));
             FileInfo[] Files = d.GetFiles("*.pdf"); //Getting pdf files
@@ -436,7 +441,8 @@ namespace TestLogin_Pages
             document.Draw(Util.GetPath("Draft/draft.pdf"));
             //MergeDocument document = new MergeDocument(str[0]);
 
-            SelectPage.SelectPages(Util.GetPath("Draft/draft.pdf"), "2-"+(count+1), Util.GetPath("Final/Final_Export.pdf"));
+            SelectPage.SelectPages(Util.GetPath("Draft/draft.pdf"), "2-" + (count + 1), Util.GetPath("Final/Final_Export.pdf"));
+            Process.Start(@"C:\Users\cpantole\source\repos\TestLogin_Pages\TestLogin_Pages\Final\Final_Export.pdf");
 
             //Console.WriteLine(str);
 
@@ -446,7 +452,13 @@ namespace TestLogin_Pages
             {
                 file.Delete();
             }
-            driver.Quit();
+
+            DirectoryInfo outp = new DirectoryInfo(@"C:\Users\cpantole\source\repos\TestLogin_Pages\TestLogin_Pages\Output");
+
+            foreach (FileInfo file in outp.GetFiles())
+            {
+                file.Delete();
+            }
         }
     }
 }
