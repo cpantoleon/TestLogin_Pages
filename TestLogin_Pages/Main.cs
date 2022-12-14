@@ -275,7 +275,8 @@ namespace TestLogin_Pages
 
                 Export.Pact("From the ECHA homepage, Navigate to the PACT Page", PDF_Execution_Name, strFinal, ex1);
                 //Process.Start(@"C:\Users\cpantole\source\repos\TestLogin_Pages\TestLogin_Pages\Output\" + PDF_Execution_Name + ".pdf");
-
+                
+                //Console.WriteLine("\n");
                 driver.Quit();
             }
 
