@@ -48,8 +48,6 @@ namespace TestLogin_Pages
         private ScipPage Factsheet;
         private ScipPage Eyebtn;
 
-        //private Validate Val1;
-
         //Substance Pact
         private String Substsance = "(+)-N-(3-ethoxypropyl)-2,4-dihydroxy-3,3-dimethylbutyramide";
 
@@ -101,7 +99,6 @@ namespace TestLogin_Pages
             FilterSearch = new ScipPage(driver);
             Factsheet = new ScipPage(driver);
             Eyebtn = new ScipPage(driver);
-            //Val1 = new Validate(driver);
 
         }
 
@@ -143,6 +140,7 @@ namespace TestLogin_Pages
             {
                 //Console.WriteLine("Failed");
                 //Console.WriteLine(ex.ToString());
+
                 ex1 = ex.ToString();
 
                 ValString.Add("No");
@@ -162,6 +160,7 @@ namespace TestLogin_Pages
 
                 Console.Write("\n\n");
                 */
+
                 //Console.WriteLine(ValString.Count);
 
                 for (int i = 0; i < ValString.Count; i++)
@@ -247,6 +246,7 @@ namespace TestLogin_Pages
 
                 Console.Write("\n\n");
                 */
+
                 //Console.WriteLine(ValString.Count);
 
                 for (int i = 0; i < ValString.Count; i++)
@@ -280,8 +280,6 @@ namespace TestLogin_Pages
 
                 driver.Quit();
             }
-
-            //Console.WriteLine("Success_PACT");
         }
 
         [TestMethod]
@@ -289,8 +287,6 @@ namespace TestLogin_Pages
         {
             try
             {
-                //Val1.val(1);
-                //Validation.val(0);
                 ValString.Add("Yes"); // Passed
 
                 NavigateScip.NavigateToSCIP();
@@ -325,8 +321,6 @@ namespace TestLogin_Pages
                 VerifyMaterial.Scip_Factsheet(Scip_Material_Text);
                 ValString.Add("Yes"); // Passed
 
-                //String[] str = ValString.ToArray();
-
                 /*
                 foreach (var item in str)
                 {
@@ -338,6 +332,7 @@ namespace TestLogin_Pages
                 {
                     Console.WriteLine(item.ToString());
                 }*/
+
                 //Console.WriteLine(ValString);
 
 
@@ -368,6 +363,7 @@ namespace TestLogin_Pages
 
                 Console.Write("\n\n");
                 */
+
                 //Console.WriteLine(ValString.Count);
 
                 for (int i = 0; i < ValString.Count; i++)
