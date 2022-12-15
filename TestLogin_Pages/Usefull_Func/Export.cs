@@ -51,7 +51,7 @@ namespace TestLogin_Pages.Usefull_Func
 
             Label label2 = new Label(dt.ToString(), 450, -50, 500, 100, Font.Helvetica, 9);
             //Console.WriteLine(dt);
-
+            
             // Create a table
             Table2 table = new Table2(75, 50, 600, 600);
             table.CellDefault.Border.Color = RgbColor.Black;
@@ -92,6 +92,8 @@ namespace TestLogin_Pages.Usefull_Func
                     table1.CellDefault.Border.Color = RgbColor.Black;
                     table1.CellSpacing = 5.0f;
 
+                    Label errorlabel = new Label("Step "+(i+1)+" failed", 0, 320, 500, 100, Font.Helvetica, 16, TextAlign.Center);
+
                     string[] collection = ex.Split('}');
 
                     // Add columns to the table
@@ -105,6 +107,7 @@ namespace TestLogin_Pages.Usefull_Func
                     row2.Cells.Add(ex);
 
                     page.Elements.Add(table1);
+                    page.Elements.Add(errorlabel);
                 }
             }
 
@@ -174,6 +177,8 @@ namespace TestLogin_Pages.Usefull_Func
                     table1.CellDefault.Border.Color = RgbColor.Black;
                     table1.CellSpacing = 5.0f;
 
+                    Label errorlabel = new Label("Step " + (i + 1) + " failed", 0, 320, 500, 100, Font.Helvetica, 16, TextAlign.Center);
+
                     // Add columns to the table
                     table1.Columns.Add(500);
                     Row2 row2 = table1.Rows.Add(40,
@@ -185,6 +190,7 @@ namespace TestLogin_Pages.Usefull_Func
                     row2.Cells.Add(ex);
 
                     page.Elements.Add(table1);
+                    page.Elements.Add(errorlabel);
                 }
             }
 
@@ -259,6 +265,9 @@ namespace TestLogin_Pages.Usefull_Func
                     table1.CellDefault.Border.Color = RgbColor.Black;
                     table1.CellSpacing = 5.0f;
 
+                    Label errorlabel = new Label("Step " + (i + 1) + " failed", 0, 320, 500, 100, Font.Helvetica, 16, TextAlign.Center);
+
+
                     string[] collection = ex.Split('}');
 
                     // Add columns to the table
@@ -272,6 +281,7 @@ namespace TestLogin_Pages.Usefull_Func
                     row2.Cells.Add(ex);
 
                     page.Elements.Add(table1);
+                    page.Elements.Add(errorlabel);
                 }
             }
 
