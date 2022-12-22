@@ -12,23 +12,6 @@ using ceTe.DynamicPDF.LayoutEngine.LayoutElements;
 
 namespace TestLogin_Pages.Usefull_Func
 {
-    /*class Validation
-    {
-        private int _Test;
-
-        public static int val(int x)
-        {
-            //?????????????????????????????????????????
-            return x;
-        }
-
-        public int Test
-        {
-            get { return _Test; }
-            set { _Test = 1; }
-        }
-    } */
-
     class Export
     {
         
