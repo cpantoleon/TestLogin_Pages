@@ -314,8 +314,8 @@ namespace TestLogin_Pages
                     //driver.SwitchTo().Window(tabs[1]);
                 }
 
-                Factsheet.factsheet();
-                ValString.Add("Yes");
+                Factsheet.factsheet(); 
+                ValString.Add("Yes"); // Passed
                 ThreadSleep.Run(4000);
 
                 VerifyMaterial.Scip_Factsheet(Scip_Material_Text);

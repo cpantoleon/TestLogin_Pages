@@ -236,7 +236,8 @@ namespace TestLogin_Pages.Usefull_Func
             AddRow(table, "2", "Navigate to the 'SCIP' page", chr[1]);
             AddRow(table, "3", "Perform a search", chr[2]);
             AddRow(table, "4", "Click on the eye icon", chr[3]);
-            AddRow(table, "5", "The SCIP item contains Mterial categories values", chr[4]);
+            AddRow(table, "5", "Navigate to the Material cateories value", chr[4]);
+            AddRow(table, "6", "The SCIP item contains Material categories values", chr[5]);
 
             //Console.WriteLine(chr);
 
