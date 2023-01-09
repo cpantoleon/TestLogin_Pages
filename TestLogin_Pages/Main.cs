@@ -18,6 +18,7 @@ using ceTe.DynamicPDF.Merger;
 using System.IO;
 using ceTe.DynamicPDF;
 using iTextSharp.text.pdf;
+using static iTextSharp.text.pdf.AcroFields;
 
 namespace TestLogin_Pages
 {
@@ -410,6 +411,10 @@ namespace TestLogin_Pages
             FileInfo[] Files = d.GetFiles("*.pdf"); //Getting pdf files
             string str = "";
 
+
+            string time = DateTime.Now.ToString("dd-M-yyyy_h.mm_tt");
+            Console.WriteLine(time.ToString());
+
             MergeDocument document = new MergeDocument();
 
             Page page = new Page(PageSize.Letter, PageOrientation.Portrait, 54.0f);
@@ -441,8 +446,8 @@ namespace TestLogin_Pages
             document.Draw(Util.GetPath("Draft/draft.pdf"));
             //MergeDocument document = new MergeDocument(str[0]);
 
-            SelectPage.SelectPages(Util.GetPath("Draft/draft.pdf"), "2-" + (count + 1), Util.GetPath("Final/Final_Export.pdf"));
-            Process.Start(@"C:\Users\cpantole\source\repos\TestLogin_Pages\TestLogin_Pages\Final\Final_Export.pdf");
+            SelectPage.SelectPages(Util.GetPath("Draft/draft.pdf"), "2-" + (count + 1), Util.GetPath("Final/Final_Export_"+ time.ToString()+".pdf"));
+            Process.Start(@"C:\Users\cpantole\source\repos\TestLogin_Pages\TestLogin_Pages\Final\Final_Export_" + time.ToString() + ".pdf");
 
             //Console.WriteLine(str);
 
