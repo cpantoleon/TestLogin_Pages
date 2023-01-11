@@ -245,11 +245,11 @@ namespace TestLogin_Pages.Usefull_Func
             {
                 if (chr[i] == 1)
                 {
-                    Table2 table1 = new Table2(0, 350, 600, 600);
+                    Table2 table1 = new Table2(0, 380, 600, 600);
                     table1.CellDefault.Border.Color = RgbColor.Black;
                     table1.CellSpacing = 5.0f;
 
-                    Label errorlabel = new Label("Step " + (i + 1) + " failed", 0, 320, 500, 100, Font.Helvetica, 16, TextAlign.Center);
+                    Label errorlabel = new Label("Step " + (i + 1) + " failed", 0, 350, 500, 100, Font.Helvetica, 16, TextAlign.Center);
 
 
                     string[] collection = ex.Split('}');
