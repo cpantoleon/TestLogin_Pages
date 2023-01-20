@@ -337,7 +337,7 @@ namespace TestLogin_Pages
                 //Console.WriteLine(ValString);
 
 
-                Export.Scip("From the ECHA homepage, Navigate to the SCIP Page", PDF_Scip_Execution_Name, ValNum, ex1);
+                Export.Scip("Navigate to the SCIP Page", PDF_Scip_Execution_Name, ValNum, ex1);
                 //Process.Start(@"C:\Users\cpantole\source\repos\TestLogin_Pages\TestLogin_Pages\Output\" + PDF_Scip_Execution_Name + ".pdf");
             }
             catch (Exception ex)
@@ -391,7 +391,7 @@ namespace TestLogin_Pages
                     Console.WriteLine(item.ToString());
                 }*/
 
-                Export.Scip("From the ECHA homepage, Navigate to the SCIP Page", PDF_Scip_Execution_Name, strFinal, ex1);
+                Export.Scip("Navigate to the SCIP Page", PDF_Scip_Execution_Name, strFinal, ex1);
                 //Process.Start(@"C:\Users\cpantole\source\repos\TestLogin_Pages\TestLogin_Pages\Output\" + PDF_Scip_Execution_Name + ".pdf");
 
                 driver.Quit();
@@ -413,7 +413,7 @@ namespace TestLogin_Pages
 
 
             string time = DateTime.Now.ToString("dd-M-yyyy_h.mm_tt");
-            Console.WriteLine(time.ToString());
+            //Console.WriteLine(time.ToString());
 
             MergeDocument document = new MergeDocument();
 
